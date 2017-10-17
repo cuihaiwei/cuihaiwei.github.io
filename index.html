@@ -151,6 +151,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-字体图标原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/17/字体图标原理/">字体图标原理</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/17/字体图标原理/" class="archive-article-date">
+  	<time datetime="2017-10-17T11:07:38.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="字符实体"><a href="#字符实体" class="headerlink" title="字符实体"></a>字符实体</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt; 小于号 &amp;<span class="comment">#60; &lt;/p&gt;</span></div><div class="line">&lt;p&gt; 大于号  &amp;<span class="comment">#62; &lt;/p&gt;</span></div></pre></td></tr></table></figure>
+<p>字符实体应该知道吧，想了解的百度……</p>
+<h3 id="实体编号和Unicode编码"><a href="#实体编号和Unicode编码" class="headerlink" title="实体编号和Unicode编码"></a>实体编号和Unicode编码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;&amp;<span class="comment">#49&lt;/p&gt;</span></div><div class="line">&lt;p&gt;1&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>是不是感觉和字符实体的写法一样？现在知道实体编号和Unicode编码的关系吧？<br>我们知道了一些特殊的字符可以直接使用Unicode编码来代替，那普通的字可以吗？<br>肯定可以的</p>
+<p>页面显示<br>1<br>1<br><a href="http://www.sojson.com/unicode.html" target="_blank" rel="external">在线Unicode编码转换</a></p>
+<h3 id="Unicode编码书写的位置和方法"><a href="#Unicode编码书写的位置和方法" class="headerlink" title="Unicode编码书写的位置和方法"></a>Unicode编码书写的位置和方法</h3><h4 id="html实例"><a href="#html实例" class="headerlink" title="html实例:"></a>html实例:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;&amp;<span class="comment">#49&lt;/p&gt;</span></div><div class="line">&lt;p&gt;&amp;<span class="comment">#x31&lt;/p&gt;</span></div><div class="line">&lt;p&gt;1&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>&amp;#49// 十进制写法<br>&amp;#x31// 十六进制写法  31转成十进制是49<br>页面显示<br>1<br>1<br>1</p>
+<h4 id="css实例"><a href="#css实例" class="headerlink" title="css实例:"></a>css实例:</h4><p>html代码:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p class=<span class="string">"box"</span>&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>css代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.box:before&#123;</div><div class="line">content: <span class="string">'\0061'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>页面显示<br>a</p>
+<h4 id="js实例"><a href="#js实例" class="headerlink" title="js实例:"></a>js实例:</h4><p>html代码:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p id=<span class="string">"p"</span>&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>js代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var op = document.getElementById(<span class="string">'p'</span>);</div><div class="line">        op.innerHTML =<span class="string">'\u0031'</span>;//输出1  Unicode</div><div class="line">//        op.innerHTML =<span class="string">'&amp;#49'</span>;//输出1 十进制</div><div class="line">//        op.innerHTML =<span class="string">'&amp;#x31'</span>;//输出1 十六进制</div></pre></td></tr></table></figure></p>
+<h3 id="字体图标和字体的关系"><a href="#字体图标和字体的关系" class="headerlink" title="字体图标和字体的关系"></a>字体图标和字体的关系</h3><p>html代码:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p class=<span class="string">"box"</span>&gt;我喜欢你&lt;/p&gt;</div><div class="line">&lt;p&gt;我喜欢你&lt;/p&gt;</div></pre></td></tr></table></figure>
+<p>css代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@font-face &#123;</div><div class="line">    font-family: <span class="string">'木舟中黑字体改版'</span>;</div><div class="line">    src: url(<span class="string">'../fonts/木舟中黑字体改版.ttf'</span>)  format(<span class="string">'truetype'</span>)</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">    font-family: <span class="string">"木舟中黑字体改版"</span> ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>页面显示:</p>
+<p><img src="https://wx3.sinaimg.cn/mw1024/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg" alt="看懂了就什么都懂了"><br>如果你能想通其中怎样实现的说明你懂了也懂字体图标的实现</p>
+<p>我编辑改变了原来的字体库，把“我”改成了“干” 喜 -&gt;你 ，欢-&gt;妈 ，你-&gt;的，操作视图 如下其中字体库相当于这里的”木舟中黑字体改版“字体，</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://wx4.sinaimg.cn/mw1024/005KNggwgy1fkjhaez8i1j30nz0i8wf1.jpg" alt="1"></h2><h5 id="图片2"><a href="#图片2" class="headerlink" title="图片2"></a>图片2</h5><p><img src="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhaezhvgj30r80kfq45.jpg" alt="1"><br>字体图标就是自定义的字体，这个字体你可以是任何图形，你要明白这里的字体也是图形</p>
+<p>###用到了一个字体编辑工具fontcreatorhanhua</p>
+<p>这是打开木舟中黑字体改版字体的界面,</p>
+<p><img src="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhafo3upj30pj0djwnc.jpg" alt="字体界面"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/17/字体图标原理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
