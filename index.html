@@ -151,6 +151,243 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-npm命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/11/npm命令/">npm常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/11/npm命令/" class="archive-article-date">
+  	<time datetime="2017-11-11T07:13:37.611Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>全局安装与本地安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install name -g   //全局安装</div><div class="line">npm install name -global</div><div class="line">全局安装（global）,使用-g 或 --global</div><div class="line"></div><div class="line">npm install name	  //本地安装（local）</div></pre></td></tr></table></figure>
+<p>将包安装到全局环境中</p>
+<h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><ol>
+<li>将安装包放在 ./node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+<li>可以通过 require() 来引入本地安装的包。</li>
+</ol>
+<h4 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h4><ol>
+<li><p>将安装包放在 /usr/local 下或者你 node 的安装目录。</p>
+</li>
+<li><p>可以直接在命令行里使用。</p>
+<h5 id="如果你希望具备两者功能，则需要在两个地方安装它或使用-npm-link。"><a href="#如果你希望具备两者功能，则需要在两个地方安装它或使用-npm-link。" class="headerlink" title="如果你希望具备两者功能，则需要在两个地方安装它或使用 npm link。"></a>如果你希望具备两者功能，则需要在两个地方安装它或使用 <strong>npm link</strong>。</h5><h4 id="安装指定版本"><a href="#安装指定版本" class="headerlink" title="安装指定版本"></a>安装指定版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install gulp@3.9.1</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm uninstall name</div></pre></td></tr></table></figure>
+<p>##更新模块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm updat name</div></pre></td></tr></table></figure></p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><p>查看所有全局（global)安装的模块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm list -g</div><div class="line">或</div><div class="line">npm ls -g</div></pre></td></tr></table></figure>
+<p>查看所有本地（local)安装的模块：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm list </div><div class="line">或</div><div class="line">npm ls</div></pre></td></tr></table></figure>
+<p>查看某个模块的版本号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm list name</div></pre></td></tr></table></figure>
+<p>查看包的安装路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm root  //输出本地（local)node_modules的路径</div><div class="line"></div><div class="line">npm root -g  //输出全局（global)node_modules的路径</div></pre></td></tr></table></figure></p>
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm search name</div></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm -v                    查看npm安装的版本</div><div class="line">或</div><div class="line">npm -version</div><div class="line"></div><div class="line">sudo npm install npm -g  更新npm</div></pre></td></tr></table></figure>
+<h3 id="Package-json"><a href="#Package-json" class="headerlink" title="Package.json"></a>Package.json</h3><p>创建生成Package.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init：会引导你创建一个package.json文件，包括名称、版本、作者这些信息等</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">name - 包名。</div><div class="line">version - 包的版本号。</div><div class="line">description - 包的描述。</div><div class="line">homepage - 包的官网 url 。</div><div class="line">author - 包的作者姓名。</div><div class="line">contributors - 包的其他贡献者姓名。</div><div class="line">dependencies - 依赖包列表。如果依赖包没有安装，npm 会自动将依赖包安装在 node_module 目录下。生产阶段的依赖</div><div class="line">devDependencies -开发环境</div><div class="line">optionalDependencies 可选阶段的依赖</div><div class="line">repository - 包代码存放的地方的类型，可以是 git 或 svn，git 可在 Github 上。</div><div class="line">main - main 字段指定了程序的主入口文件，require(&apos;moduleName&apos;) 就会加载这个文件。这个字段的默认值是模块根目录下面的 index.js。</div><div class="line">keywords - 关键字</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[-S|--save|-D|--save-dev|-O|--save-optional] [-E|--save-exact] [--dry-run]</div></pre></td></tr></table></figure>
+<h3 id="项目对模块的依赖可以使用下面的-3-种方法来表示"><a href="#项目对模块的依赖可以使用下面的-3-种方法来表示" class="headerlink" title="项目对模块的依赖可以使用下面的 3 种方法来表示"></a>项目对模块的依赖可以使用下面的 3 种方法来表示</h3><p><strong>-S, –save 安装包信息将加入到dependencies（生产阶段的依赖）</strong></p>
+<p>举例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install gulp --save 或 npm install gulp -S</div><div class="line">package.json 文件的 dependencies 字段：</div><div class="line">&quot;dependencies&quot;: &#123; &quot;gulp&quot;: &quot;^3.9.1&quot;&#125;</div></pre></td></tr></table></figure>
+<p><strong>-D, –save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它</strong></p>
+<p>举例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install gulp --save-dev 或 npm install gulp -D</div><div class="line">package.json 文件的 devDependencies字段</div><div class="line">&quot;devDependencies&quot;: &#123; &quot;gulp&quot;: &quot;^3.9.1&quot;&#125;</div></pre></td></tr></table></figure>
+<p><strong>-O, –save-optional 安装包信息将加入到optionalDependencies（可选阶段的依赖）</strong><br>举例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install gulp --save-optional 或 npm install gulp -O</div><div class="line">package.json 文件的optionalDependencies字段：</div><div class="line">&quot;optionalDependencies&quot;: &#123; &quot;gulp&quot;: &quot;^3.9.1&quot;&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>-E, –save-exact 精确安装指定模块版本</strong><br>举例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install gulp --save-exact 或 npm install gulp -E</div><div class="line">package.json 文件的 dependencies 字段：</div><div class="line">&quot;dependencies&quot;: &#123; &quot;gulp&quot;: &quot;3.9.1&quot;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="版本管理"><a href="#版本管理" class="headerlink" title="版本管理"></a>版本管理</h3><p> npm 中模块版本遵循的规范：<a href="http://semver.org/" target="_blank" rel="external">semver 2.0</a>。</p>
+<p><a href="http://semver.org/" target="_blank" rel="external">semver 2.0</a>。</p>
+<table>
+<thead>
+<tr>
+<th>表达式</th>
+<th>版本范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt;=1.2.7</td>
+<td>大于等于1.2.7</td>
+</tr>
+<tr>
+<td>&gt;=1.2.7 &lt;1.3.0</td>
+<td><code>1.2.7,1.2.8,1.2.9</code></td>
+</tr>
+<tr>
+<td>1.2.3 - 2.3.4</td>
+<td>&gt;=1.2.3 &lt;=2.3.4</td>
+</tr>
+<tr>
+<td>1.2 - 2.3.4</td>
+<td>&gt;=1.2.0 &lt;=2.3.4</td>
+</tr>
+<tr>
+<td>1.2.3 - 2.3</td>
+<td>&gt;=1.2.3 &lt;2.4.0</td>
+</tr>
+<tr>
+<td>1.2.3 - 2</td>
+<td>&gt;=1.2.3 &lt;3.0.0</td>
+</tr>
+<tr>
+<td>*</td>
+<td>&gt;=0.0.0</td>
+</tr>
+<tr>
+<td>1.x(等价于1.X)</td>
+<td>&gt;=1.0.0 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>1.2.x</td>
+<td>&gt;=1.2.0 &lt;1.3.0</td>
+</tr>
+<tr>
+<td>“”(等价于*)</td>
+<td>&gt;=0.0.0</td>
+</tr>
+<tr>
+<td>1(等价于1.x.x)</td>
+<td>&gt;=1.0.0 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>1.2(等价于1.2.x)</td>
+<td>&gt;=1.2.0 &lt;1.3.0</td>
+</tr>
+<tr>
+<td>~1.2.3(&gt;=1.2.3 &lt;1.(2+1).0)</td>
+<td>&gt;=1.2.3 &lt;1.3.0</td>
+</tr>
+<tr>
+<td>~1.2(&gt;=1.2.0 &lt;1.(2+1).0)</td>
+<td>&gt;=1.2.0 &lt;1.3.0</td>
+</tr>
+<tr>
+<td>~1(&gt;=1.0.0 &lt;(1+1).0.0)</td>
+<td>&gt;=1.0.0 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>~0.2.3(&gt;=0.2.3 &lt;0.(2+1).0)</td>
+<td>&gt;=0.2.3 &lt;0.3.0</td>
+</tr>
+<tr>
+<td>~0.2(&gt;=0.2.0 &lt;0.(2+1).0)</td>
+<td>&gt;=0.2.0 &lt;0.3.0</td>
+</tr>
+<tr>
+<td>~0(&gt;=0.0.0 &lt;(0+1).0.0)</td>
+<td>&gt;=0.0.0 &lt;1.0.0</td>
+</tr>
+<tr>
+<td>~1.2.3-beta.2</td>
+<td>&gt;=1.2.3-beta.2 &lt;1.3.0</td>
+</tr>
+<tr>
+<td>^1.2.3</td>
+<td>&gt;=1.2.3 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>^0.2.3</td>
+<td>&gt;=0.2.3 &lt;0.3.0</td>
+</tr>
+<tr>
+<td>^0.0.3</td>
+<td>&gt;=0.0.3 &lt;0.0.4</td>
+</tr>
+<tr>
+<td>^1.2.3-beta.2</td>
+<td>&gt;=1.2.3-beta.2 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>^0.0.3-beta</td>
+<td>&gt;=0.0.3-beta &lt;0.0.4</td>
+</tr>
+<tr>
+<td>^1.2.x</td>
+<td>&gt;=1.2.0 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>^0.0.x</td>
+<td>&gt;=0.0.0 &lt;0.1.0</td>
+</tr>
+<tr>
+<td>^0.0</td>
+<td>&gt;=0.0.0 &lt;0.1.0</td>
+</tr>
+<tr>
+<td>^1.x</td>
+<td>&gt;=1.0.0 &lt;2.0.0</td>
+</tr>
+<tr>
+<td>^0.x</td>
+<td>&gt;=0.0.0 &lt;1.0.0</td>
+</tr>
+</tbody>
+</table>
+<h1 id="npm-config"><a href="#npm-config" class="headerlink" title="npm config"></a><strong>npm config</strong></h1><p><strong>npm start 启动模块</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm start gulp</div></pre></td></tr></table></figure>
+<p>该命令写在package.json文件scripts的start字段中，可以自定义命令来配置一个服务器环境和安装一系列的必要程序，如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123; &quot;gulp&quot;: &quot;gulp -all&quot;&#125;</div></pre></td></tr></table></figure>
+<p>如果package.json文件没有设置start，则将直接启动node server.js</p>
+<p><strong>npm stop 停止模块</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm stop [-- &lt;args&gt;]</div></pre></td></tr></table></figure>
+<p><strong>npm restart 重新启动模块</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm restart [-- &lt;args&gt;]</div></pre></td></tr></table></figure>
+<p>推荐:<a href="http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html" target="_blank" rel="external">npm-阮一峰</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/11/npm命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-字体图标原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
