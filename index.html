@@ -18,7 +18,7 @@
     <link rel="alternative" href="/atom.xml" title="崔海伟" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.266c1c.css">
   <style type="text/css">
@@ -151,6 +151,432 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sublime插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/14/sublime插件/">sublime 常用插件</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/14/sublime插件/" class="archive-article-date">
+  	<time datetime="2018-10-14T10:58:35.923Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>插件名称</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Package Control</code></td>
+<td style="text-align:left">插件包管理器</td>
+</tr>
+<tr>
+<td><code>Localization</code></td>
+<td style="text-align:left">汉化插件</td>
+</tr>
+<tr>
+<td><code>Default</code></td>
+<td style="text-align:left">作者</td>
+</tr>
+<tr>
+<td><code>emmet</code></td>
+<td style="text-align:left">前端代码提示</td>
+</tr>
+<tr>
+<td><code>git</code></td>
+<td style="text-align:left">git</td>
+</tr>
+<tr>
+<td><code>GitGutter</code></td>
+<td style="text-align:left">git 代码对比</td>
+</tr>
+<tr>
+<td><code>babel</code></td>
+<td style="text-align:left">代码高亮 es6, jsx 语法高亮</td>
+</tr>
+<tr>
+<td><code>ConvertToUTF8</code></td>
+<td style="text-align:left">解决中文乱码问题</td>
+</tr>
+<tr>
+<td><code>DocBlockr</code></td>
+<td style="text-align:left">代码注释</td>
+</tr>
+<tr>
+<td><code>ColorPicker</code></td>
+<td style="text-align:left">调色板插件</td>
+</tr>
+<tr>
+<td><code>AutoFileName</code></td>
+<td style="text-align:left">文件路径提示</td>
+</tr>
+<tr>
+<td><code>HTML-CSS-JS Prettify</code></td>
+<td style="text-align:left">代码格式化插件</td>
+</tr>
+<tr>
+<td><code>Terminal</code></td>
+<td style="text-align:left">直接打开命令行插件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Package-Control"><a href="#Package-Control" class="headerlink" title="Package Control"></a>Package Control</h3><p>  <a href="https://packagecontrol.io/installation" target="_blank" rel="external">https://packagecontrol.io/installation</a></p>
+<h3 id="Emmet-前端代码提示"><a href="#Emmet-前端代码提示" class="headerlink" title="Emmet 前端代码提示"></a>Emmet 前端代码提示</h3><p><a href="http://www.cnblogs.com/engeng/articles/5955167.html" target="_blank" rel="external">http://www.cnblogs.com/engeng/articles/5955167.html</a></p>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>1.修改配置文件 添加git软件路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;git_command&quot;: &quot;D:/IDE/Git/cmd/git.exe&quot;</div></pre></td></tr></table></figure>
+<h3 id="DocBlockr-代码注释"><a href="#DocBlockr-代码注释" class="headerlink" title="DocBlockr 代码注释"></a>DocBlockr 代码注释</h3><p>DocBlockr: 代码块注释</p>
+<p>可以快速的对函数进行注释。保持代码规范。支持多种语言,有 JavaScript (including ES6), PHP, ActionScript, Haxe, CoffeeScript, TypeScript, Java, Apex, Groovy, Objective C, C, C++ and Rust.</p>
+<p>自定义配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"> 位置：Preference -&gt; Package Settings -&gt; DocBlockr -&gt; Settings - User</div><div class="line"> 配置：</div><div class="line">&#123;</div><div class="line">    &quot;jsdocs_extra_tags&quot;:[</div><div class="line">        &quot;@Author Hybrid&quot;,</div><div class="line">        &quot;@DateTime &#123;&#123;date&#125;&#125;&quot;,</div><div class="line">        &quot;@copyright $&#123;1:[copyright]&#125;&quot;,</div><div class="line">        &quot;@license $&#123;1:[license]&#125;&quot;,</div><div class="line">        &quot;@version $&#123;1:[version]&#125;&quot;</div><div class="line">    ],</div><div class="line">    &quot;jsdocs_function_description&quot;: false</div><div class="line">  &#125;</div><div class="line">  </div><div class="line"> /**</div><div class="line"> * 函数功能简述</div><div class="line"> *</div><div class="line"> * 具体描述一些细节</div><div class="line"> *</div><div class="line"> * @param    &#123;string&#125;  address     地址</div><div class="line"> * @param    &#123;array&#125;   com         商品数组</div><div class="line"> * @param    &#123;string&#125;  pay_status  支付方式</div><div class="line"> * @returns  void</div><div class="line"> * @date     2016-06-12</div><div class="line"> * @author   Judy</div><div class="line"> */</div><div class="line">参考： https://github.com/spadgos/sublime-jsdocs/</div><div class="line">https://frontenddev.org/article/sublime-does-text-3-plug-in-docblockr-with-javascript-comments-specification.html</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@auhor</code></td>
+<td>作者</td>
+</tr>
+<tr>
+<td><code>@param</code></td>
+<td>参数</td>
+</tr>
+<tr>
+<td><code>@example</code></td>
+<td>示例</td>
+</tr>
+<tr>
+<td><code>@link</code></td>
+<td>链接</td>
+</tr>
+<tr>
+<td><code>@namespace</code></td>
+<td>命名空间</td>
+</tr>
+<tr>
+<td><code>@requires</code></td>
+<td>依赖模块</td>
+</tr>
+<tr>
+<td><code>@return</code></td>
+<td>返回值</td>
+</tr>
+<tr>
+<td><code>@version</code></td>
+<td>版本号</td>
+</tr>
+</tbody>
+</table>
+<h4 id="评论装饰"><a href="#评论装饰" class="headerlink" title="评论装饰"></a>评论装饰</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// Foo bar baz&lt;&lt;Ctrl+Enter&gt;&gt;</div><div class="line"></div><div class="line">-- becomes</div><div class="line"></div><div class="line">/////////////////</div><div class="line">// Foo bar baz //</div><div class="line">/////////////////</div></pre></td></tr></table></figure>
+<p>可以通过将<code>jsdocs_decorate</code>设置更改为禁用此功能<code>false</code>。</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>1.配置git 路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	&quot;git_command&quot;: &quot;C:/Program Files/MyCmder/vendor/git-for-windows/cmd/git.exe&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">https://segmentfault.com/a/1190000008761006</div></pre></td></tr></table></figure>
+<h3 id="GitGutter"><a href="#GitGutter" class="headerlink" title="GitGutter"></a>GitGutter</h3><p>git 代码修改高亮</p>
+<p>1.配置git 路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;git_binary&quot;:&quot;E:\\Program Files\\Git\\bin\\git.exe&quot;</div><div class="line">　　//这里的地址是你Git工具安装的目录下的bin文件夹，不要照着超过去哦，会有问题的</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><p>babel是一款为 ES6+ JavaScript设计的语法描述插件，支持ES6， React.js, jsx代码高亮，对 JavaScript, jQuery 也有很好的扩展。</p>
+<p>1.包管理器安装:  Package Control -&gt;  install package   -&gt;   babel</p>
+<p>2.手动安装babel</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">下载sublime babel插件安装包 https://github.com/babel/babel-sublime</div><div class="line">然后把这个安装包解压后放到sublime的安装目录的packages文件夹内；</div><div class="line">然后重新打开sublime，【查看】---【语法】--【babel-sublime-master】-【javascript(babel)】选中打钩就行了</div></pre></td></tr></table></figure>
+<h3 id="ConvertToUTF8"><a href="#ConvertToUTF8" class="headerlink" title="ConvertToUTF8"></a>ConvertToUTF8</h3><p>默认快捷键: ConvertToUTF8快捷键为:ctrl+shift+c </p>
+<p>注意:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">快捷键冲突: 和 ColorPicker 快捷键冲突  要修改一个</div></pre></td></tr></table></figure>
+<p>1.包管理器安装:  Package Control -&gt;  install package   -&gt;    ConvertToUTF8</p>
+<p>2.手动安装ConvertToUTF8</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">下载ConvertToUTF8    https://github.com/seanliang/ConvertToUTF8/archive/master.zip</div><div class="line">并解压，将解压后的文件夹名修改为 ConvertToUTF8 ，然后将此文件夹移动到 Sublime Text 的 Packages 文件夹下（可通过 Sublime Text 菜单中的 Preferences &gt; Browse Packages 找到 Packages 文件夹）。</div></pre></td></tr></table></figure>
+<p>先下载<a href="https://github.com/seanliang/ConvertToUTF8/archive/master.zip" target="_blank" rel="external">ConvertToUTF8</a>并解压，将解压后的文件夹名修改为 ConvertToUTF8 ，然后将此文件夹移动到 Sublime Text 的 Packages 文件夹下（可通过 Sublime Text 菜单中的 Preferences &gt; Browse Packages 找到 Packages 文件夹）。</p>
+<h3 id="ColorPicker"><a href="#ColorPicker" class="headerlink" title="ColorPicker"></a>ColorPicker</h3><p>默认快捷键: Colorpicker快捷键为:ctrl+shift+c</p>
+<p>自定义快捷键：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">修改快捷键:</div><div class="line">Default (Windows).sublime-keymap</div></pre></td></tr></table></figure></p>
+<h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><p> 打印中文乱码 </p>
+<p>修改后的文件: Nodejs.sublime-build</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;encoding&quot;: &quot;utf8&quot;,</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">修改配置:</div><div class="line">Terminal.sublime-settings </div><div class="line"></div><div class="line">修改快捷键:</div><div class="line">Default (Windows).sublime-keymap </div><div class="line"></div><div class="line">选择插件文件夹，里面有三个文件，分别是 Default (Linux).sublime-keymap、Default (Linux).sublime-keymap、Default (Linux).sublime-keymap，分别代表了各自系统下的快捷键，根据你自己的系统更改即可。</div><div class="line"></div><div class="line">一般修改配置都是这两个文件</div></pre></td></tr></table></figure>
+<h3 id="HTML-CSS-JS-Prettify"><a href="#HTML-CSS-JS-Prettify" class="headerlink" title="HTML-CSS-JS Prettify"></a>HTML-CSS-JS Prettify</h3><p>注意点:</p>
+<ol>
+<li>修改node软件路径</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">使用此插件需先安装node.js，windows默认安装在C盘，如果安装在其它地方，需额外配置node.js安装目录。 </div><div class="line"></div><div class="line">配置 node 目录： 鼠标右击 -&gt;  HTML/CSS/JS Prettify -&gt; set `node` path</div></pre></td></tr></table></figure>
+<p>2.“html-css-js prettify” 格式化CSS会在每个CSS后面都添加一个换行，若想取消该换行： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">鼠标右键 -&gt; &apos;Prettify preference - Default&apos;  -&gt; </div><div class="line">修改设置 “newline_between_rules” 的参数为 false。</div></pre></td></tr></table></figure>
+<h3 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h3><p>配置: </p>
+<p>terminal 终端路径 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123; </div><div class="line">// window下终端路径 </div><div class="line">“terminal”: “C:\MyAPP\cmder\Cmder.exe”, </div><div class="line">// window下终端参数 </div><div class="line">“parameters”: [“/START”, “%CWD%”] </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/14/sublime插件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ReRes映射" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/14/ReRes映射/">ReRes映射</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/14/ReRes映射/" class="archive-article-date">
+  	<time datetime="2018-10-14T10:51:38.051Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安装ReRes插件(需要翻墙): <a href="https://chrome.google.com/webstore/detail/reres/gieocpkbblidnocefjakldecahgeeica?hl=zh-CN&amp;gl=CN" target="_blank" rel="external">https://chrome.google.com/webstore/detail/reres/gieocpkbblidnocefjakldecahgeeica?hl=zh-CN&amp;gl=CN</a></p>
+<p>其他方法安装：百度</p>
+<p>前端开发过程中，经常会有需要对远程环境调试的需求。比如，修改线上bug，开发环境不在本地等等。我们需要把远程css文件或者js映射到本地的文件上，通过修改本地文件进行调试和开发</p>
+<p> ReRes就是居于这个目标写出来的，您可以把请求映射到其他的url，也可以映射到你本机的文件或者目录。ReRes支持单个url映射，也支持目录映射。</p>
+<p>是不是感觉很爽；</p>
+<h2 id="例子1-改变百度的按钮样式，"><a href="#例子1-改变百度的按钮样式，" class="headerlink" title="例子1:  改变百度的按钮样式，"></a>例子1:  改变百度的按钮样式，</h2><h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><p><img src="https://wx3.sinaimg.cn/mw690/005KNggwgy1fpzqpz1eqij30u20gqt92.jpg" alt="映射效果图"></p>
+<h3 id="1-在桌面新建一个demo-css文件"><a href="#1-在桌面新建一个demo-css文件" class="headerlink" title="1.在桌面新建一个demo.css文件 ;"></a>1.在桌面新建一个demo.css文件 ;</h3><p><img src="https://wx2.sinaimg.cn/mw690/005KNggwgy1fpzqpz1l2ej30ed08j0u9.jpg" alt="demo.css"></p>
+<h3 id="2-把百度首页引入的soutu-css样式拷贝到demo-css"><a href="#2-把百度首页引入的soutu-css样式拷贝到demo-css" class="headerlink" title="2.把百度首页引入的soutu.css样式拷贝到demo.css;"></a>2.把百度首页引入的soutu.css样式拷贝到demo.css;</h3><p><img src="https://wx2.sinaimg.cn/mw690/005KNggwgy1fpzqpz1mwgj30zq0c0dhu.jpg" alt="soutu.css样式拷贝到demo.css"></p>
+<h3 id="3-写正则"><a href="#3-写正则" class="headerlink" title="3.写正则:"></a>3.写正则:</h3><p><img src="https://wx3.sinaimg.cn/mw690/005KNggwgy1fpzqpz1d3aj30o706v3zm.jpg" alt="正则"></p>
+<p>^<a href="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/css/soutu.css" target="_blank" rel="external">https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/css/soutu.css</a></p>
+<p>file:///C:\Users\Lenovo\Desktop\demo.css</p>
+<p>ReRes正则写法规则推荐： <a href="https://github.com/annnhan/ReRes" target="_blank" rel="external">https://github.com/annnhan/ReRes</a>;</p>
+<h3 id="4-检查是否映射成功"><a href="#4-检查是否映射成功" class="headerlink" title="4.检查是否映射成功;"></a>4.检查是否映射成功;</h3><p><img src="https://wx1.sinaimg.cn/mw690/005KNggwgy1fpzqpz1hidj311a0bvdi7.jpg" alt="检查是否映射成功"></p>
+<h3 id="5-添加样式"><a href="#5-添加样式" class="headerlink" title="5.添加样式"></a>5.添加样式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#su.s_btn &#123;</div><div class="line">	color: #000;</div><div class="line">	background: green;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="https://wx3.sinaimg.cn/mw690/005KNggwgy1fpzqpyzz00j30lm0cnabe.jpg" alt="添加样式"><br><img src="https://wx2.sinaimg.cn/mw690/005KNggwgy1fpzqpz40qhj30ue0dbju9.jpg" alt="添加样式"></p>
+<h2 id="例子2-项目中使用"><a href="#例子2-项目中使用" class="headerlink" title="例子2: 项目中使用"></a>例子2: 项目中使用</h2><p>一般项目都测试环境如，本地，内网测试，线上测试，</p>
+<p>我们开发测试流程是:本地 —&gt;  内网测试   —&gt;  线上测试  –&gt; 生产,</p>
+<p>一般代码都在本地调试，</p>
+<p>有些情况需要在:内网测试,线上测试,生产,特别是生产怎么可能给你乱搞，</p>
+<p>下面是线上测试项目结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">├─dist_stg	 // 线上测试</div><div class="line">│  ├─css</div><div class="line">│  ├─images</div><div class="line">│  ├─js			</div><div class="line">│  │  ├─module</div><div class="line">│  │  └─plugin</div><div class="line">│  └─theme     </div><div class="line">│      ├─activity_chlj</div><div class="line">│      │  └─css</div><div class="line">│      └─default</div><div class="line">│          └─css</div></pre></td></tr></table></figure>
+<p>现在拿线上测试环境举例：</p>
+<p>如线上测试环境域名：www.baidu.com</p>
+<p>本地代码位置：F:\crt\crt_wap\dist_stg </p>
+<p>正则如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">^www.baidu.com/css/index.js</div><div class="line"></div><div class="line">file:///F:\crt\crt_wap\dist_stg\css\index.js</div></pre></td></tr></table></figure></p>
+<p>这个是映射一个inde.js,文件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">^www.baidu.com/js</div><div class="line"></div><div class="line">file:///F:\crt\crt_wap\dist_stg\js</div></pre></td></tr></table></figure>
+<p>这样就是映射一个文件夹，如果你请求的www.baidu.com/js/index.js,它对应的文件是F:\crt\crt_wap\dist_stg\js\index.js</p>
+<p>我一般在什么情况下使用;</p>
+<p>(1)有项目的代码，环境没有搭建(有些项目搭建环境要很久，什么虚拟机，linux，nginx …。)</p>
+<p>(2)希望在线上调试。或其他环境调试</p>
+<p>主意：映射html文件，显示的是源码，</p>
+<p>但是可以这样映射</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">https://www.jd.com</div><div class="line"></div><div class="line">https://www.taobao.com</div></pre></td></tr></table></figure>
+<p>访问<a href="https://www.jd.com" target="_blank" rel="external">https://www.jd.com</a> 测试一下就知道了</p>
+<p>​    </p>
+<p>​    </p>
+<p>​    </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">调试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">插件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">chrome</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/chrome/" class="article-tag-list-link color2">chrome</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/14/ReRes映射/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Android微信固定定位软键盘软键盘顶起的兼容性问题，(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/14/Android微信固定定位软键盘软键盘顶起的兼容性问题，(1)/">Android系统微信固定定位软键盘软键盘顶起的兼容性问题，</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/14/Android微信固定定位软键盘软键盘顶起的兼容性问题，(1)/" class="archive-article-date">
+  	<time datetime="2018-10-14T10:43:14.576Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android系统微信固定定位软键盘软键盘顶起的兼容性问题，<br>在苹果系统下没有问题，<br>解决思路：<br>1.input焦点事件触发是隐藏 固定元素，<br>2.子input失去焦点事件触发显示固定元素这里做了处理（显示元素推迟300毫秒），为了就是让软键盘消失后在显示时间自己可以修改</p>
+<p>html：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;nav-right&quot;&gt;定位元素&lt;/div&gt;</div><div class="line">&lt;input type=&quot;text&quot;&gt;</div></pre></td></tr></table></figure>
+<p>js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">//input焦点事件处理更多按钮在在软键盘的定位问题</div><div class="line">  (function ()&#123;</div><div class="line">      var inputs =document.getElementsByTagName(&apos;input&apos;);</div><div class="line">      /*定时器的状态*/</div><div class="line">      var status =false;</div><div class="line">      /*事件*/</div><div class="line">      var e =&apos;focus&apos;;</div><div class="line">      var time= 300;</div><div class="line">      var timer = null;</div><div class="line">      function showHidden()&#123;</div><div class="line">          if(status)return;</div><div class="line">          status =true;</div><div class="line">          clearTimeout(timer);</div><div class="line">          if(e ==&apos;focus&apos;)&#123;</div><div class="line">              time =0</div><div class="line">          &#125;else &#123;</div><div class="line">              time =300</div><div class="line">          &#125;</div><div class="line">          timer = setTimeout(function ()&#123;</div><div class="line">              if(e ==&apos;focus&apos;)&#123;</div><div class="line">                  document.getElementsByClassName(&apos;nav-right&apos;)[0].style.display = &apos;none&apos;;</div><div class="line">              &#125;else if(e ==&apos;blur&apos;)&#123;</div><div class="line">                  document.getElementsByClassName(&apos;nav-right&apos;)[0].style.display = &apos;block&apos;;</div><div class="line">              &#125;</div><div class="line">              status =false;</div><div class="line">          &#125;,time);</div><div class="line">      &#125;</div><div class="line">      if(document.getElementsByClassName(&apos;nav-right&apos;).length)&#123;</div><div class="line">          for(var i = 0; i &lt;inputs.length;i ++ )&#123;</div><div class="line">              inputs[i].onfocus =function ()&#123;</div><div class="line">                  e =&apos;focus&apos;;</div><div class="line">                  showHidden()</div><div class="line">              &#125;;</div><div class="line">              inputs[i].onblur = function ()&#123;</div><div class="line">                  e =&apos;blur&apos;;</div><div class="line">                  showHidden()</div><div class="line">              &#125;</div><div class="line">          &#125;</div><div class="line">      &#125;</div><div class="line">  &#125;)();</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">兼容性</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/14/Android微信固定定位软键盘软键盘顶起的兼容性问题，(1)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-npm命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -164,7 +590,7 @@
 
         
         <a href="/2017/11/11/npm命令/" class="archive-article-date">
-  	<time datetime="2017-11-11T07:13:37.611Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
+  	<time datetime="2017-11-11T07:13:37.612Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
 </a>
         
       </header>
@@ -354,6 +780,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">node</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -401,7 +838,7 @@
 
         
         <a href="/2017/10/17/字体图标原理/" class="archive-article-date">
-  	<time datetime="2017-10-17T11:07:38.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
+  	<time datetime="2017-10-17T11:07:38.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-17</time>
 </a>
         
       </header>
@@ -617,6 +1054,7 @@ wc -w filename 报告单词数
 <li>git add .</li>
 <li>git commit -m ‘update .gitignore’</li>
 </ul>
+<h3 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h3><p><img src="https://wx4.sinaimg.cn/mw690/005KNggwgy1fm8lyc4i7aj30zk0p4dmt.jpg" alt="git命令"></p>
 
       
 
@@ -625,150 +1063,22 @@ wc -w filename 报告单词数
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/12/git命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-wos" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/01/wos/">Flex 布局</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/01/wos/" class="archive-article-date">
-  	<time datetime="2017-07-01T11:10:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、Flex"><a href="#一、Flex" class="headerlink" title="一、Flex"></a>一、Flex</h3><p>传统的布局，是基于盒状模型。依赖 display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。<br>于是W3C在2009年提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能.</p>
-<h3 id="二、Flex布局是什么"><a href="#二、Flex布局是什么" class="headerlink" title="二、Flex布局是什么"></a>二、Flex布局是什么</h3><hr>
-<p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
-<h3 id="三、使用display-flex还是display-inline-flex-它们的区别是什么？"><a href="#三、使用display-flex还是display-inline-flex-它们的区别是什么？" class="headerlink" title="三、使用display: flex还是display: inline-flex;它们的区别是什么？"></a>三、使用display: flex还是display: inline-flex;它们的区别是什么？</h3><p>display: flex;表示当前元素使用弹性布局切本身是块级元素，</p>
-<p>display: inline-flex; 表示当前元素使用弹性布局切本身是行内元素，</p>
-<p>我想你应该知道怎么选择吧，如果不懂看看块级元素和行内元素。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/01/wos/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/01/hello-world/" class="archive-article-date">
-  	<time datetime="2017-07-01T10:38:50.700Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/01/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -808,7 +1118,7 @@ wc -w filename 报告单词数
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 崔海伟
+    		&copy; 2018 崔海伟
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -889,6 +1199,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">调试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">chrome</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">sublime</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
