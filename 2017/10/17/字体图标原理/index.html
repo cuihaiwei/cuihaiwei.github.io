@@ -14,15 +14,15 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/17/字体图标原理/index.html">
 <meta property="og:site_name" content="崔海伟">
 <meta property="og:description" content="字符实体12&amp;lt;p&amp;gt; 小于号 &amp;amp;#60; &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt; 大于号  &amp;amp;#62; &amp;lt;/p&amp;gt; 字符实体应该知道吧，想了解的百度…… 实体编号和Unicode编码12&amp;lt;p&amp;gt;&amp;amp;#49&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;1&amp;lt;/p&amp;gt; 是不是感觉和字符实体的写法一样？现在知道实体编号和Unicode编码的关系吧？我们">
-<meta property="og:image" content="https://wx3.sinaimg.cn/mw1024/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg">
-<meta property="og:image" content="https://wx4.sinaimg.cn/mw1024/005KNggwgy1fkjhaez8i1j30nz0i8wf1.jpg">
-<meta property="og:image" content="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhaezhvgj30r80kfq45.jpg">
-<meta property="og:image" content="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhafo3upj30pj0djwnc.jpg">
-<meta property="og:updated_time" content="2017-10-17T11:22:07.724Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogPicture/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogPicture/005KNggwgy1fkjhaez8i1j30nz0i8wf1.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogPicture/005KNggwgy1fkjhaezhvgj30r80kfq45.jpg">
+<meta property="og:image" content="http://yoursite.com/assets/blogPicture/005KNggwgy1fkjhafo3upj30pj0djwnc.jpg">
+<meta property="og:updated_time" content="2020-08-06T03:42:34.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字体图标原理">
 <meta name="twitter:description" content="字符实体12&amp;lt;p&amp;gt; 小于号 &amp;amp;#60; &amp;lt;/p&amp;gt;&amp;lt;p&amp;gt; 大于号  &amp;amp;#62; &amp;lt;/p&amp;gt; 字符实体应该知道吧，想了解的百度…… 实体编号和Unicode编码12&amp;lt;p&amp;gt;&amp;amp;#49&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;1&amp;lt;/p&amp;gt; 是不是感觉和字符实体的写法一样？现在知道实体编号和Unicode编码的关系吧？我们">
-<meta name="twitter:image" content="https://wx3.sinaimg.cn/mw1024/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogPicture/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -204,12 +204,12 @@ var _hmt = _hmt || [];
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;p class=<span class="string">"box"</span>&gt;我喜欢你&lt;/p&gt;</div><div class="line">&lt;p&gt;我喜欢你&lt;/p&gt;</div></pre></td></tr></table></figure>
 <p>css代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@font-face &#123;</div><div class="line">    font-family: <span class="string">'木舟中黑字体改版'</span>;</div><div class="line">    src: url(<span class="string">'../fonts/木舟中黑字体改版.ttf'</span>)  format(<span class="string">'truetype'</span>)</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">    font-family: <span class="string">"木舟中黑字体改版"</span> ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>页面显示:</p>
-<p><img src="https://wx3.sinaimg.cn/mw1024/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg" alt="看懂了就什么都懂了"><br>如果你能想通其中怎样实现的说明你懂了也懂字体图标的实现</p>
+<p><img src="/assets/blogPicture/005KNggwgy1fkjhaf05yxj30aj0fcjsd.jpg" alt="看懂了就什么都懂了"><br>如果你能想通其中怎样实现的说明你懂了也懂字体图标的实现</p>
 <p>我编辑改变了原来的字体库，把“我”改成了“干” 喜 -&gt;你 ，欢-&gt;妈 ，你-&gt;的，操作视图 如下其中字体库相当于这里的”木舟中黑字体改版“字体，</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://wx4.sinaimg.cn/mw1024/005KNggwgy1fkjhaez8i1j30nz0i8wf1.jpg" alt="1"></h2><h5 id="图片2"><a href="#图片2" class="headerlink" title="图片2"></a>图片2</h5><p><img src="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhaezhvgj30r80kfq45.jpg" alt="1"><br>字体图标就是自定义的字体，这个字体你可以是任何图形，你要明白这里的字体也是图形</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/assets/blogPicture/005KNggwgy1fkjhaez8i1j30nz0i8wf1.jpg" alt="1"></h2><h5 id="图片2"><a href="#图片2" class="headerlink" title="图片2"></a>图片2</h5><p><img src="/assets/blogPicture/005KNggwgy1fkjhaezhvgj30r80kfq45.jpg" alt="1"><br>字体图标就是自定义的字体，这个字体你可以是任何图形，你要明白这里的字体也是图形</p>
 <p>###用到了一个字体编辑工具fontcreatorhanhua</p>
 <p>这是打开木舟中黑字体改版字体的界面,</p>
-<p><img src="https://wx2.sinaimg.cn/mw1024/005KNggwgy1fkjhafo3upj30pj0djwnc.jpg" alt="字体界面"></p>
+<p><img src="/assets/blogPicture/005KNggwgy1fkjhafo3upj30pj0djwnc.jpg" alt="字体界面"></p>
 
       
 
@@ -355,7 +355,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 崔海伟
+    		&copy; 2020 崔海伟
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -438,7 +438,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -454,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">兼容性</a>
+                <a href="javascript:void(0)" class="js-tag color5">node</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">node</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
